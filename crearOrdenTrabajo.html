@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Orden de Trabajo</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3">
+        <div class="container-fluid d-flex justify-content-between">
+            <div>
+                <a href="#" class="navbar-brand">Vista Principal</a>
+                <a href="/listar.html" class="navbar-brand">Listado de Ordenes de trabajo</a>
+                <a href="/consultarpedido.html" class="navbar-brand">Consultar pedido</a>
+            </div>
+            <button aria-controls="basic-navbar-nav" type="button" data-bs-target="#navbarToggleExternalContent" class="navbar-toggler collapsed text-white"><span class="navbar-toggler-icon"></span></button>
+            <div class="navbar-collapse collapse">
+                <div class="ms-auto">
+                    <li class="nav-item dropdown-">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-3 text-white"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                      </li>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="container-fluid me-5">
+
+
+        <h1>Crear Orden de Trabajo</h1>
+        <hr>
+        
+        <form class="mb-3">
+            <div class="container-fluid p-3">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 p-1">
+                        <div class="mx-lg-1 mb-3 border border-dark-subtle rounded p-3 shadow">
+                            <p class="h4 text-primary fs-2">Lejos</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg">
+                                    <p class="h5">Ojo Izquierdo</p>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <label class="form-label">Esfera</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Cilindro</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Eje</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    
+                                    <div class="mb-3 form-check p-0">
+                                        <label class="form-label">Cristal</label>
+                                        <select class="form-select seleccionarCristalesLejos">
+                                            <option selected>Seleccione un tipo de cristal</option>
+                                            <option value="ORG LAB SHIBA 1.6">ORG LAB SHIBA 1.6</option>
+                                            <option value="ORG LAB SHIBA 1.7">ORG LAB SHIBA 1.7</option>
+                                            <option value="ORG LAB SHIBA 1.8">ORG LAB SHIBA 1.8</option>
+                                        </select>
+                                        <div class="precioCristalesLejos form-text"></div>
+                                    </div>
+                                
+                                    <div class="mb-3 form-check p-0">
+                                    <label class="form-label">Tratamiento</label>
+                                        <select class="form-select seleccionarTratamientosLejos">
+                                            <option selected>Seleccione un tratamiento</option>
+                                            <option value="Tratamiento 1">Tratamiento 1</option>
+                                            <option value="Tratamiento 2">Tratamiento 2</option>
+                                            <option value="Tratamiento 3">Tratamiento 3</option>
+                                        </select>
+                                        <div class="form-text precioTratamientosLejos"> </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg">
+                                    <hr class="d-lg-none mt-3">
+                                    <p class="h5">Ojo Derecho</p>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <label class="form-label">Esfera</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Cilindro</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Eje</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3 form-check p-0">
+                                        <label class="form-label">Cristal</label>
+                                            <select class="form-select seleccionarCristalesLejos">
+                                                <option selected>Seleccione un tipo de cristal</option>
+                                                <option value="ORG LAB SHIBA 1.6">ORG LAB SHIBA 1.6</option>
+                                                <option value="ORG LAB SHIBA 1.7">ORG LAB SHIBA 1.7</option>
+                                                <option value="ORG LAB SHIBA 1.8">ORG LAB SHIBA 1.8</option>
+                                            </select>
+                                            <div class="form-text precioCristalesLejos"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3 form-check p-0">
+                                        <label class="form-label">Tratamiento</label>
+                                            <select class="form-select seleccionarTratamientosLejos">
+                                                <option selected>Seleccione un tratamiento</option>
+                                                <option value="Tratamiento 1">Tratamiento 1</option>
+                                                <option value="Tratamiento 2">Tratamiento 2</option>
+                                                <option value="Tratamiento 3">Tratamiento 3</option>
+                                            </select>
+                                            <div class="form-text precioTratamientosLejos"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-1">
+                        <div class="mx-lg-1 mb-3 border border-dark-subtle rounded p-3 shadow">
+                            <p class="h4 text-primary fs-2">Cerca</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg">
+                                    <p class="h5">Ojo Izquierdo</p>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <label class="form-label">Esfera</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Cilindro</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Eje</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    
+                                    <div class="mb-3 form-check p-0">
+                                        <label class="form-label">Cristal</label>
+                                        <select class="form-select seleccionarCristalesCerca">
+                                            <option selected>Seleccione un tipo de cristal</option>
+                                            <option value="ORG LAB SHIBA 1.6">ORG LAB SHIBA 1.6</option>
+                                            <option value="ORG LAB SHIBA 1.7">ORG LAB SHIBA 1.7</option>
+                                            <option value="ORG LAB SHIBA 1.8">ORG LAB SHIBA 1.8</option>
+                                        </select>
+                                        <div class="form-text precioCristalesCerca"></div>
+                                    </div>
+                                
+                                    <div class="mb-3 form-check p-0">
+                                    <label class="form-label">Tratamiento</label>
+                                        <select class="form-select seleccionarTratamientosCerca">
+                                            <option selected>Seleccione un tratamiento</option>
+                                            <option value="Tratamiento 1">Tratamiento 1</option>
+                                            <option value="Tratamiento 2">Tratamiento 2</option>
+                                            <option value="Tratamiento 3">Tratamiento 3</option>
+                                        </select>
+                                        <div class="form-text precioTratamientosCerca"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg">
+                                    <hr class="d-lg-none mt-3">
+                                    <p class="h5">Ojo Derecho</p>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <label class="form-label">Esfera</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Cilindro</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Eje</label>
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3 form-check p-0">
+                                        <label class="form-label">Cristal</label>
+                                            <select class="form-select seleccionarCristalesCerca">
+                                                <option selected>Seleccione un tipo de cristal</option>
+                                                <option value="ORG LAB SHIBA 1.6">ORG LAB SHIBA 1.6</option>
+                                                <option value="ORG LAB SHIBA 1.7">ORG LAB SHIBA 1.7</option>
+                                                <option value="ORG LAB SHIBA 1.8">ORG LAB SHIBA 1.8</option>
+                                            </select>
+                                            <div class="form-text precioCristalesCerca"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3 form-check p-0">
+                                        <label class="form-label">Tratamiento</label>
+                                            <select class="form-select seleccionarTratamientosCerca">
+                                                <option selected>Seleccione un tratamiento</option>
+                                                <option value="Tratamiento 1">Tratamiento 1</option>
+                                                <option value="Tratamiento 2">Tratamiento 3</option>
+                                                <option value="Tratamiento 3">Tratamiento 2</option>
+                                            </select>
+                                            <div class="form-text precioTratamientosCerca"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col">
+                    <div class="mb-3 form-check p-0">
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-md-0 mb-3">
+                                <label class="form-label">Armazón</label>
+                                <select class="form-select seleccionarArmazon">
+                                    <option selected>Seleccione un armazón</option>
+                                    <option value="Armazón Propio">Armazón Propio</option>
+                                    <option value="REE52180150">REE52180150</option>
+                                    <option value="REE53097167">REE53097167</option>
+                                </select>
+                                <div class="form-text precioArmazon"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-label">Armazón 2</label>
+                                    <button id="removeFrame" class="btn btn-outline-danger my-0 py-0 d-none" style="border: none;"><i class="bi bi-x-lg"></i></button>
+                                </div>
+
+                                <button id="addFrame" class="btn btn-secondary form-control">Agregar Armazón <i class="bi bi-plus fs-6"></i></button>
+                                <select id="selectFrame" class="form-select d-none seleccionarArmazon2">
+                                    <option selected>Seleccione un armazón</option>
+                                    <option value="Armazón Propio">Armazón Propio</option>
+                                    <option value="REE52180150">REE52180150</option>
+                                    <option value="REE53097167">REE53097167</option>
+                                </select>
+                                <div id="framePrice" class="form-text d-none precioArmazon2">Precio: </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Profesional</label>
+                <input type="text" class="form-control" id="">
+            </div>
+
+            <fieldset class="p-3 mb-3 border border-dark-subtle rounded shadow">
+                <legend class="text-primary fw-bold">Datos del cliente</legend>
+                <hr class="mb-3">
+                <div class="tab-content" id="myTabContent">
+                    <fieldset class="tab-pane fade show active p-3 mb-3 border border-secondary-subtle rounded-bottom" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="mb-3">
+                                <label class="form-label">DNI</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control" id="dni">
+                                    <button type="button" class="btn btn-primary ms-3"><i class="bi bi-search"></i></button>
+                                </div>
+                            </div>  
+                            <div class="col">
+                                
+                                <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name">
+                                </div>
+                                
+                                <div class="mb-3">
+                                <label class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="lastname">
+                                </div>
+                            </div>
+        
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Teléfono / Celular</label>
+                                    <input type="tel" class="form-control" pattern="[0-9]{10}" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="">
+                                </div>
+                            </div>
+                        </div>
+        
+                        
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label class="form-label">Domicilio</label>
+                                <input type="text" class="form-control" id="">
+                            </div>
+                            <div class="col">
+                                <label class="form-label">Localidad</label>
+                                <select class="form-select">
+                                    <option selected>Seleccione la Localidad</option>
+                                    <option value="1">Aguilares</option>
+                                    <option value="2">Alderetes</option>
+                                    <option value="3">Banda del Río Salí</option>
+                                    <option value="4">Bella Vista</option>
+                                    <option value="5">Burruyacú</option>
+                                    <option value="6">Concepción</option>
+                                    <option value="7">Famaillá</option>
+                                    <option value="8">Graneros</option>
+                                    <option value="9">Juan Bautista Alberdi</option>
+                                    <option value="10">La Cocha</option>
+                                    <option value="11">Las Talitas</option>
+                                    <option value="12">Lules</option>
+                                    <option value="13">Monteros</option>
+                                    <option value="14">San Miguel de Tucumán</option>
+                                    <option value="15">Simoca</option>
+                                    <option value="16">Tafí del Valle</option>
+                                    <option value="17">Tafí Viejo</option>
+                                    <option value="18">Trancas</option>
+                                    <option value="19">Yerba Buena</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+
+                </div>
+
+                
+            </fieldset>
+
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3 form-check p-0">
+                        <label class="form-label">Obra Social</label>
+                        <select class="form-control" placeholder="Ingrese la Obra Social">
+                            <option selected value="sin">Sin Obra Social (0%)</option>
+                            <option value="ospa">OSPA (30%)</option>
+                            <option value="ospoce">OSPOCE (50%)</option>
+                            <option value="osalara">OSALARA (20%)</option>
+                            <option value="osseg">OSSEG (100%)</option>
+                            <option value="osplad">OSPLAD (75%)</option>
+                            <option value="osprera">OSPRERA (40%)</option>
+                            <option value="osfe">OSFE (90%)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col">
+                    <label for="" class="form-label fw-bold">Ingrese monto de la seña</label>
+                    <input class="form-control" type="number" name="" id="" placeholder="$(total / 2)">
+                    <div class="form-text">Mínimo de seña: $(total/2)</div>
+                </div>
+                <div class="col">
+                    <label for="" class="form-label fw-bold">Seleccione fecha estimada de entrega</label>
+                    <input type="date" name="" id="" class="form-control">
+                </div>
+            </div>
+
+            <p class="mb-0 fw-bold obtenerTotalActualizado"></p>
+            <p class=" text-secondary ps-2 mb-0">Descuento por Obra Social: </p>
+            <br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+                <button type="submit" class="btn btn-danger">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+
+    <footer class="bg-dark-subtle d-flex justify-content-center align-items-center">
+        <p class="fw-bold m-0">© Copyright 2025 Solmar - All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
