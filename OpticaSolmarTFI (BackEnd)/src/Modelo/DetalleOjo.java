@@ -11,7 +11,7 @@ public class DetalleOjo {
     public DetalleOjo() {
     }
 
-    public DetalleOjo(double esfera, double cilindro, double eje, Ojo ojo, Tratamiento tratamiento, Cristal cristal) {
+    public DetalleOjo(Ojo ojo, double esfera, double cilindro, double eje, Tratamiento tratamiento, Cristal cristal) {
         this.esfera = esfera;
         this.cilindro = cilindro;
         this.eje = eje;

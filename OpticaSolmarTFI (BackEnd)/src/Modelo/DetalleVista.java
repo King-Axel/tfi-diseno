@@ -23,6 +23,46 @@ public class DetalleVista {
        detalleOjoIzquierdo.setOjo(Ojo.IZQUIERDO);
        detalleOjoDerecho.setOjo(Ojo.DERECHO);
     }
+    
+    public DetalleVista(
+            Vista vista,
+            Armazon armazon,
+            double esfOI,
+            double cilOI,
+            double ejeOI,
+            Cristal cristalOI,
+            Tratamiento tratamientoOI,
+            double esfOD,
+            double cilOD,
+            double ejeOD,
+            Cristal cristalOD,
+            Tratamiento tratamientoOD
+    ) {
+        this.vista = vista;
+        this.armazon = armazon;
+        
+        if (cristalOI != null && tratamientoOI != null) {
+            detalleOjoIzquierdo = new DetalleOjo(
+                Ojo.IZQUIERDO,
+                esfOI,
+                cilOI,
+                ejeOI,
+                tratamientoOI,
+                cristalOI
+            );
+        }
+        
+        if (cristalOD != null && tratamientoOD != null) {
+            detalleOjoDerecho = new DetalleOjo(
+                Ojo.DERECHO,
+                esfOD,
+                cilOD,
+                ejeOD,
+                tratamientoOD,
+                cristalOD
+            );
+        }
+    }
 
     public Vista getVista() {
         return vista;
@@ -74,29 +114,5 @@ public class DetalleVista {
 
     public void setDetalleOjoDerecho(DetalleOjo detalleOjoDerecho) {
         this.detalleOjoDerecho = detalleOjoDerecho;
-    }
-    
-    public void crearDetalleOjo(
-            double esfera,
-            double cilindro,
-            double eje,
-            Tratamiento tratamiento,
-            Cristal cristal,
-            Ojo ojo
-    ) {
-        
-        DetalleOjo dOjo = new DetalleOjo();
-        dOjo.setEsfera(esfera);
-        dOjo.setCilindro(cilindro);
-        dOjo.setEje(eje);
-        dOjo.setTratamiento(tratamiento);
-        dOjo.setCristal(cristal);
-        dOjo.setOjo(ojo);
-        
-        if (ojo == Ojo.IZQUIERDO) {
-            detalleOjoIzquierdo = dOjo;
-        } else {
-            detalleOjoDerecho = dOjo;
-        }
     }
 }

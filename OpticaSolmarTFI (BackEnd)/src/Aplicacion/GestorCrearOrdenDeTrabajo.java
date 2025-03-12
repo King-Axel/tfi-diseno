@@ -113,7 +113,7 @@ public class GestorCrearOrdenDeTrabajo {
         
         ObraSocial os = repositorio.buscarObraSocial(codigos.getObraSocial());
         
-        OrdenDeTrabajo ot = empleado.crearOrdenDeTrabajo(
+        OrdenDeTrabajo ot = new OrdenDeTrabajo(
                 clienteOT,
                 empleado,
                 ordenTrabajo.getSenia(),

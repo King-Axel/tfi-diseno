@@ -17,24 +17,6 @@ public class OrdenDeTrabajo {
 
     public OrdenDeTrabajo() {
     }
-
-   public OrdenDeTrabajo(
-           double senia,
-           Date fechaEntregaEstimada,
-           Empleado vendedor,
-           Cliente cliente,
-           ObraSocial obraSocial,
-           String profesional
-   ) {
-       this.senia = senia;
-       this.fechaEntregaEstimada = fechaEntregaEstimada;
-       this.vendedor = vendedor;
-       this.cliente = cliente;
-       this.obraSocial = obraSocial;
-       this.profesional = profesional;
-       
-       estado = EstadoOrdenDeTrabajo.GENERADA;
-   }
     
     public OrdenDeTrabajo(  
         double senia, 
@@ -58,6 +40,93 @@ public class OrdenDeTrabajo {
         estado = EstadoOrdenDeTrabajo.GENERADA;        
     }
 
+    public OrdenDeTrabajo(
+            Cliente cliente,
+            Empleado vendedor,
+            double senia,
+            Date fechaEntrega,
+            String profesional,
+            Cristal cristalOIL,
+            Cristal cristalODL,
+            Cristal cristalOIC,
+            Cristal cristalODC,
+            Tratamiento tratamientoOIL,
+            Tratamiento tratamientoODL,
+            Tratamiento tratamientoOIC,
+            Tratamiento tratamientoODC,
+            Armazon armazonUno,
+            Armazon armazonDos,
+            ObraSocial obraSocial,
+            double esfODL,
+            double esfOIL,
+            double esfODC,
+            double esfOIC,
+            double cilODL,
+            double cilOIL,
+            double cilODC,
+            double cilOIC,
+            double ejeODL,
+            double ejeOIL,
+            double ejeODC,
+            double ejeOIC
+    ) {
+        this.estado = EstadoOrdenDeTrabajo.GENERADA;
+        this.senia = senia;
+        this.fechaEntregaEstimada = fechaEntrega;
+        this.vendedor = vendedor;
+        this.cliente = cliente;
+        this.obraSocial = obraSocial;
+        detalleVistaLejos = null;
+        detalleVistaCerca = null;
+        this.profesional = profesional;
+        
+        if (
+                cristalOIL != null && 
+                tratamientoOIL != null &&
+                cristalODL != null & 
+                tratamientoODL != null
+            ) {
+            
+            detalleVistaLejos = new DetalleVista(
+                    Vista.LEJOS,
+                    armazonUno,
+                    esfOIL,
+                    cilOIL,
+                    ejeOIL,
+                    cristalOIL,
+                    tratamientoOIL,
+                    esfODL,
+                    cilODL,
+                    ejeODL,
+                    cristalODL,
+                    tratamientoODL
+            );
+        }
+        
+        if (
+                cristalOIC != null && 
+                tratamientoOIC != null &&
+                cristalODC != null & 
+                tratamientoODC != null
+            ) {
+            
+            detalleVistaLejos = new DetalleVista(
+                    Vista.CERCA,
+                    armazonDos,
+                    esfOIC,
+                    cilOIC,
+                    ejeOIC,
+                    cristalOIC,
+                    tratamientoOIC,
+                    esfODC,
+                    cilODC,
+                    ejeODC,
+                    cristalODC,
+                    tratamientoODC
+            );
+        }
+    }
+    
     public int getNumero() {
         return numero;
     }
@@ -100,54 +169,5 @@ public class OrdenDeTrabajo {
     
     public String getProfesional() {
         return profesional;
-    }
-    
-    public void crearDetalleVista(
-            Vista vista, 
-            Armazon armazon,
-            double esferaIzq,
-            double cilindroIzq,
-            double ejeIzq,
-            Tratamiento tratamientoIzq,
-            Cristal cristalIzq,
-            double esferaDer,
-            double cilindroDer,
-            double ejeDer,
-            Tratamiento tratamientoDer,
-            Cristal cristalDer
-    ) {
-        
-        if (
-                tratamientoIzq != null && 
-                tratamientoDer != null &&
-                cristalIzq != null &&
-                cristalDer != null
-        ) {
-            DetalleVista dv = new DetalleVista(vista, armazon);
-        
-            dv.crearDetalleOjo(
-                    esferaIzq,
-                    cilindroIzq,
-                    ejeIzq,
-                    tratamientoIzq,
-                    cristalIzq,
-                    Ojo.IZQUIERDO
-            );
-
-            dv.crearDetalleOjo(
-                    esferaDer,
-                    cilindroDer,
-                    ejeDer,
-                    tratamientoDer,
-                    cristalDer,
-                    Ojo.DERECHO
-            );
-
-            if (vista == Vista.CERCA) {
-                detalleVistaCerca = dv;
-            } else {
-                detalleVistaLejos = dv;
-            }
-        }
     }
 }
